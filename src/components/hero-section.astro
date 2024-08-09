@@ -1,0 +1,29 @@
+---
+import Button from "./button.astro";
+---
+
+<section class="wrapper">
+  <div class="bg-gray-500 absolute top-0 left-0 w-full h-[600px] -z-10">
+    <img
+      src="/public/hero-bg.webp"
+      alt="Imagen de fondo"
+      class="object-cover w-full h-full mix-blend-multiply"
+    />
+  </div>
+
+  <div
+    class="h-[600px] flex flex-col justify-center items-start max-w-[70ch] gap-2"
+  >
+    <h1 class="text-white text-6xl">
+      Negociaciones Exitosas, Resultados Tangibles
+    </h1>
+    <h3 class="text-gray-300 text-xl">
+      En Inverfin, diseñamos estrategias a medida para asegurar acuerdos
+      exitosos, guiándote en cada paso del proceso.
+    </h3>
+    <Button className="mt-4 w-1/2">Envia tus datos</Button>
+    <p class="text-gray-300 text-sm">
+      No compartiremos tu información con nadie.
+    </p>
+  </div>
+</section>
