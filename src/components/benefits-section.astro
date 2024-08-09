@@ -1,0 +1,30 @@
+---
+import BenefitCard from "./benefit-card.astro";
+import HandshakeIcon from "../icons/handshake.astro";
+---
+
+<section class="wrapper pb-16 pt-10 flex flex-col items-center gap-10">
+  <div class="flex gap-2 items-center">
+    <HandshakeIcon />
+    <h3 class="text-3xl font-semibold">Beneficios de operar con nosotros</h3>
+  </div>
+
+  <div class="flex flex-wrap gap-10 justify-around items-start">
+    <BenefitCard
+      title="Experiencia"
+      description="Con más de 30 años de experiencia brindamos asesoramiento personalizado armando carteras a medida según el perfil del inversor."
+    />
+    <BenefitCard
+      title="Estrategias Personalizadas"
+      description="Cada negociación es única; adaptamos nuestras estrategias a tus necesidades específicas."
+    />
+    <BenefitCard
+      title="Resultados Tangibles"
+      description="Nos enfocamos en resultados concretos, asegurando que cada acuerdo beneficie a tus intereses."
+    />
+    <BenefitCard
+      title="Confianza y Transparencia"
+      description="Operamos con total transparencia y manteniendo siempre tu confianza como nuestra prioridad."
+    />
+  </div>
+</section>

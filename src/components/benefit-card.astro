@@ -1,0 +1,18 @@
+---
+import BadgeCheckIcon from "../icons/badge-check.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<article class="flex flex-col items-center text-center max-w-72">
+  <BadgeCheckIcon />
+  <h3 class="text-xl font-semibold mt-2">{title}</h3>
+  <p class="text-foreground">
+    {description}
+  </p>
+</article>
