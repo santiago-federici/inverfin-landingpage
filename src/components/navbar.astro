@@ -1,0 +1,84 @@
+---
+import { cn } from "../lib/utils";
+import Button from "./button.astro";
+
+const navLinks = [
+  {
+    title: "Inicio",
+    href: "#",
+  },
+  {
+    title: "Beneficios",
+    href: "#",
+  },
+  {
+    title: "Quénes somos",
+    href: "#",
+  },
+  {
+    title: "Servicios",
+    href: "#",
+  },
+  {
+    title: "Empezar a invertir",
+    href: "#",
+  },
+  {
+    title: "Ubicación",
+    href: "#",
+  },
+];
+
+const isOpen = false;
+---
+
+<header class="flex justify-between items-center wrapper py-4">
+  <h1 class="text-4xl font-black">Logo</h1>
+  <nav class="lg:flex gap-4 items-center hidden">
+    {
+      navLinks.map((link) => (
+        <a href={link.href} class="hover:text-primary duration-200 text-nowrap">
+          {link.title}
+        </a>
+      ))
+    }
+    <Button className="ml-2">Clientes</Button>
+  </nav>
+
+  <svg
+    class="flex lg:hidden"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <line x1="4" x2="20" y1="12" y2="12"></line>
+    <line x1="4" x2="20" y1="6" y2="6"></line>
+    <line x1="4" x2="20" y1="18" y2="18"></line>
+  </svg>
+
+  <aside
+    class={cn(
+      "lg:hidden border-l shadow-lg h-full fixed p-10 gap-4 right-0 top-0 flex flex-col z-50 bg-background",
+      {
+        hidden: !isOpen,
+        flex: isOpen,
+      }
+    )}
+    <nav
+    class="lg:flex gap-4 items-center hidden"
+  >
+    {
+      navLinks.map((link) => (
+        <a href={link.href} class="hover:text-primary duration-200">
+          {link.title}
+        </a>
+      ))
+    }
+    <Button>Clientes</Button>
+  </aside>
+</header>
