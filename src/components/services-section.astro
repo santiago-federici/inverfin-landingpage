@@ -1,5 +1,14 @@
 ---
-import Building from "../icons/building.astro";
+import WalletIcon from "../icons/wallet.astro";
+import ChartSplineIcon from "../icons/chart-spline.astro";
+import ReceiptIcon from "../icons/receipt.astro";
+import CaptionsIcon from "../icons/captions.astro";
+import MessageSquareIcon from "../icons/message-square.astro";
+import BadgeDollarSignIcon from "../icons/badge-dollar-sign.astro";
+import TrendingUpIcon from "../icons/trending-up.astro";
+import CircuitBoardIcon from "../icons/circuit-board.astro";
+import TicketCheckIcon from "../icons/ticket-check.astro";
+import RadioTowerIcon from "../icons/radio-tower.astro";
 import ServiceCard from "./service-card.astro";
 
 const services = [
@@ -7,60 +16,60 @@ const services = [
     title: "Acciones",
     description:
       "Títulos representativos del capital de una sociedad anónima. El inversor es socio proporcional.",
-    icon: Building,
+    icon: ChartSplineIcon,
   },
   {
     title: "Cedears",
     description:
       "Certificados de acciones extranjeras que cotizan en la bolsa Argentina.",
-    icon: Building,
+    icon: ReceiptIcon,
   },
   {
     title: "Títulos públicos",
     description:
       "Representan deuda emitida por el estado nacional, provincial y municipal. Pagan renta fija.",
-    icon: Building,
+    icon: CaptionsIcon,
   },
   {
     title: "Obligaciones negociables",
     description:
       "Títulos representativos de deuda emitidos por empresas privadas. Pagan renta fija.",
-    icon: Building,
+    icon: MessageSquareIcon,
   },
   {
     title: "Fidecoismos financieros",
     description:
       "Patrimonios autónomos representados en certificados de deuda y de participación.",
-    icon: Building,
+    icon: BadgeDollarSignIcon,
   },
   {
     title: "Caución bursátil",
     description:
       "Operación financiera para tomar o invertir fondos con garantía real de títulos valores.",
-    icon: Building,
+    icon: TrendingUpIcon,
   },
   {
     title: "Factura de crédito electrónica",
     description: "Negociación bursátil para financiamiento o inversión.",
-    icon: Building,
+    icon: CircuitBoardIcon,
   },
   {
     title: "Cheque de pago diferido",
     description: "Negociación bursátil para financiamiento o inversión.",
-    icon: Building,
+    icon: TicketCheckIcon,
   },
   {
     title: "Operaciones en el exterior",
     description:
       "Distintas operaciones realizables en convenio con QUIENA S.A. AAGI",
-    icon: Building,
+    icon: RadioTowerIcon,
   },
 ];
 ---
 
 <section class="wrapper pt-10 pb-16 flex flex-col gap-20 items-center">
   <div class="flex gap-2 items-center">
-    <Building />
+    <WalletIcon />
     <h3 class="text-2xl md:text-3xl font-semibold">Servicios</h3>
   </div>
 
