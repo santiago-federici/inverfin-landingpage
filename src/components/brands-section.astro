@@ -2,10 +2,7 @@
 import BuildingIcon from "../icons/building.astro";
 ---
 
-<section class="pb-16 pt-10 relative">
-  <!-- background white -->
-  <div class="absolute bg-white top-0 left-0 w-full h-full -z-10"></div>
-
+<!-- ================= Option 1 ================= --><!-- <section class="relative py-10 bg-white">
   <div class="wrapper flex flex-col gap-20 items-center">
     <div class="flex gap-2 items-center">
       <BuildingIcon />
@@ -15,15 +12,20 @@ import BuildingIcon from "../icons/building.astro";
     </div>
 
     <div
-      class="flex flex-wrap items-center justify-center gap-x-20 gap-y-10 lg:gap-40 bg-white"
+      class="flex flex-wrap items-center justify-center gap-x-20 gap-y-10 lg:gap-40"
     >
       <img src="/logos/byma.svg" alt="Logo de Byma" />
       <img src="/logos/mav.svg" alt="Logo de Mav" />
-      <img
-        src="/logos/rofex.svg"
-        alt="Logo de Rofex"
-        class="bg-[#652E6D] px-2 py-1"
-      />
+      <img src="/logos/rofex.svg" alt="Logo de Rofex" />
     </div>
+  </div>
+</section> --><!-- ================= Option 2 ================= -->
+<section class="relative py-10 bg-white">
+  <div
+    class="wrapper flex flex-wrap items-center justify-center gap-x-20 gap-y-10 lg:gap-40"
+  >
+    <img src="/logos/byma.svg" alt="Logo de Byma" />
+    <img src="/logos/mav.svg" alt="Logo de Mav" />
+    <img src="/logos/rofex.svg" alt="Logo de Rofex" />
   </div>
 </section>
