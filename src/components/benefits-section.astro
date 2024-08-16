@@ -1,32 +1,46 @@
 ---
 import BenefitCard from "./benefit-card.astro";
-import HandshakeIcon from "../icons/handshake.astro";
+import ChartIcon from "../icons/chart-no-axes-combined.astro";
+import WrenchIcon from "../icons/wrench.astro";
+import ShieldIcon from "../icons/shield.astro";
+import CircleCheckIcon from "../icons/circle-check.astro";
 ---
 
-<section class="wrapper pb-16 pt-10 flex flex-col items-center gap-20">
-  <div class="flex gap-2 items-center">
-    <HandshakeIcon />
-    <h3 class="text-2xl md:text-3xl font-semibold">
-      Beneficios de operar con nosotros
-    </h3>
+<section
+  class="wrapper pb-16 pt-10 flex flex-col items-center gap-12 lg:gap-20"
+>
+  <div class="space-y-1 text-center">
+    <h3 class="text-3xl md:text-4xl font-bold">¿Por qué Elegir Inverfin?</h3>
+    <p class="text-muted-foreground">
+      Descubre cómo podemos ayudarte a alcanzar tus metas financieras.
+    </p>
   </div>
 
-  <div class="flex flex-wrap gap-10 justify-around items-start">
+  <div class="flex flex-wrap justify-around items-start gap-10 w-full">
     <BenefitCard
-      title="Experiencia"
-      description="Con más de 30 años de experiencia brindamos asesoramiento personalizado armando carteras a medida según el perfil del inversor."
-    />
+      title="Experiencia Comprobada"
+      description="Más de 30 años brindando asesoramiento personalizado y armando carteras a medida."
+    >
+      <ChartIcon />
+    </BenefitCard>
+
     <BenefitCard
       title="Estrategias Personalizadas"
       description="Cada negociación es única; adaptamos nuestras estrategias a tus necesidades específicas."
-    />
+    >
+      <WrenchIcon />
+    </BenefitCard>
     <BenefitCard
       title="Resultados Tangibles"
       description="Nos enfocamos en resultados concretos, asegurando que cada acuerdo beneficie a tus intereses."
-    />
+    >
+      <CircleCheckIcon />
+    </BenefitCard>
     <BenefitCard
       title="Confianza y Transparencia"
       description="Operamos con total transparencia y manteniendo siempre tu confianza como nuestra prioridad."
-    />
+    >
+      <ShieldIcon />
+    </BenefitCard>
   </div>
 </section>
