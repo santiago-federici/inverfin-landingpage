@@ -4,6 +4,33 @@ import ChartIcon from "../icons/chart-no-axes-combined.astro";
 import WrenchIcon from "../icons/wrench.astro";
 import ShieldIcon from "../icons/shield.astro";
 import CircleCheckIcon from "../icons/circle-check.astro";
+
+const benefits = [
+  {
+    title: "Experiencia Comprobada",
+    description:
+      "Más de 30 años brindando asesoramiento personalizado y armando carteras a medida.",
+    icon: ChartIcon,
+  },
+  {
+    title: "Estrategias Personalizadas",
+    description:
+      "Cada negociación es única; adaptamos nuestras estrategias a tus necesidades específicas.",
+    icon: WrenchIcon,
+  },
+  {
+    title: "Resultados Tangibles",
+    description:
+      "Nos enfocamos en resultados concretos, asegurando que cada acuerdo beneficie a tus intereses.",
+    icon: CircleCheckIcon,
+  },
+  {
+    title: "Confianza y Transparencia",
+    description:
+      "Operamos con total transparencia y manteniendo siempre tu confianza como nuestra prioridad.",
+    icon: ShieldIcon,
+  },
+];
 ---
 
 <section
@@ -19,7 +46,7 @@ import CircleCheckIcon from "../icons/circle-check.astro";
   <div class="flex justify-between w-full">
     <div class="w-1/3 hidden lg:flex">
       <img
-        src="/public/illustrations/certification-illustration.svg"
+        src="/illustrations/certification-illustration.svg"
         alt="Ilustración de certificación"
         class="object-cover"
       />
@@ -28,31 +55,13 @@ import CircleCheckIcon from "../icons/circle-check.astro";
     <div
       class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 lg:grid-rows-2 lg:w-1/2 gap-8"
     >
-      <BenefitCard
-        title="Experiencia Comprobada"
-        description="Más de 30 años brindando asesoramiento personalizado y armando carteras a medida."
-      >
-        <ChartIcon />
-      </BenefitCard>
-
-      <BenefitCard
-        title="Estrategias Personalizadas"
-        description="Cada negociación es única; adaptamos nuestras estrategias a tus necesidades específicas."
-      >
-        <WrenchIcon />
-      </BenefitCard>
-      <BenefitCard
-        title="Resultados Tangibles"
-        description="Nos enfocamos en resultados concretos, asegurando que cada acuerdo beneficie a tus intereses."
-      >
-        <CircleCheckIcon />
-      </BenefitCard>
-      <BenefitCard
-        title="Confianza y Transparencia"
-        description="Operamos con total transparencia y manteniendo siempre tu confianza como nuestra prioridad."
-      >
-        <ShieldIcon />
-      </BenefitCard>
+      {
+        benefits.map((benefit) => (
+          <BenefitCard title={benefit.title} description={benefit.description}>
+            <benefit.icon />
+          </BenefitCard>
+        ))
+      }
     </div>
   </div>
 </section>
