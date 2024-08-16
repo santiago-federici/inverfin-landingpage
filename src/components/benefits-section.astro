@@ -16,31 +16,43 @@ import CircleCheckIcon from "../icons/circle-check.astro";
     </p>
   </div>
 
-  <div class="flex flex-wrap justify-around items-start gap-10 w-full">
-    <BenefitCard
-      title="Experiencia Comprobada"
-      description="Más de 30 años brindando asesoramiento personalizado y armando carteras a medida."
-    >
-      <ChartIcon />
-    </BenefitCard>
+  <div class="flex justify-between w-full">
+    <div class="w-1/3 hidden lg:flex">
+      <img
+        src="/public/illustrations/certification-illustration.svg"
+        alt="Ilustración de certificación"
+        class="object-cover"
+      />
+    </div>
 
-    <BenefitCard
-      title="Estrategias Personalizadas"
-      description="Cada negociación es única; adaptamos nuestras estrategias a tus necesidades específicas."
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 lg:grid-rows-2 lg:w-1/2 gap-8"
     >
-      <WrenchIcon />
-    </BenefitCard>
-    <BenefitCard
-      title="Resultados Tangibles"
-      description="Nos enfocamos en resultados concretos, asegurando que cada acuerdo beneficie a tus intereses."
-    >
-      <CircleCheckIcon />
-    </BenefitCard>
-    <BenefitCard
-      title="Confianza y Transparencia"
-      description="Operamos con total transparencia y manteniendo siempre tu confianza como nuestra prioridad."
-    >
-      <ShieldIcon />
-    </BenefitCard>
+      <BenefitCard
+        title="Experiencia Comprobada"
+        description="Más de 30 años brindando asesoramiento personalizado y armando carteras a medida."
+      >
+        <ChartIcon />
+      </BenefitCard>
+
+      <BenefitCard
+        title="Estrategias Personalizadas"
+        description="Cada negociación es única; adaptamos nuestras estrategias a tus necesidades específicas."
+      >
+        <WrenchIcon />
+      </BenefitCard>
+      <BenefitCard
+        title="Resultados Tangibles"
+        description="Nos enfocamos en resultados concretos, asegurando que cada acuerdo beneficie a tus intereses."
+      >
+        <CircleCheckIcon />
+      </BenefitCard>
+      <BenefitCard
+        title="Confianza y Transparencia"
+        description="Operamos con total transparencia y manteniendo siempre tu confianza como nuestra prioridad."
+      >
+        <ShieldIcon />
+      </BenefitCard>
+    </div>
   </div>
 </section>
