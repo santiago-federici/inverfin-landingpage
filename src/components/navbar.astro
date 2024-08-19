@@ -17,7 +17,15 @@ const isOpen = false;
         </a>
       ))
     }
-    <Button className="ml-2">Clientes</Button>
+    <Button className="ml-2">
+      <a
+        href="http://virtualbroker-inverfinsa.aunesa.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Clientes
+      </a>
+    </Button>
   </nav>
 
   <svg
@@ -44,16 +52,16 @@ const isOpen = false;
         flex: isOpen,
       }
     )}
-    <nav
-    class="lg:flex gap-4 items-center hidden"
   >
-    {
-      NAV_LINKS.map((link) => (
-        <a href={link.href} class="hover:text-primary duration-200">
-          {link.title}
-        </a>
-      ))
-    }
+    <nav class="lg:hidden gap-4 items-center flex flex-col w-60">
+      {
+        NAV_LINKS.map((link) => (
+          <a href={link.href} class="hover:text-primary duration-200">
+            {link.title}
+          </a>
+        ))
+      }
+    </nav>
     <Button>Clientes</Button>
   </aside>
 </header>
