@@ -1,32 +1,70 @@
 ---
-import BookCheckIcon from "../icons/book-check.astro";
+import FileSpreadsheet from "../icons/file-spreadsheet.astro";
 import Button from "./button.astro";
 ---
 
-<section class="pb-16 pt-10 relative" id="requirements">
-  <!-- white background -->
-  <div class="absolute bg-white top-0 left-0 w-full h-full -z-10"></div>
-  <div class="wrapper flex flex-col gap-20 items-center">
-    <div class="flex gap-2 items-center">
-      <BookCheckIcon />
-      <h3 class="text-2xl md:text-3xl font-semibold">
+<section class="pb-16 pt-10 relative bg-white" id="requirements">
+  <div class="wrapper flex flex-col gap-10">
+    <div class="flex flex-col gap-20 items-center">
+      <h3 class="text-3xl md:text-4xl font-bold">
         ¿Qué necesito para empezar a invertir?
       </h3>
+
+      <p class="text-lg text-muted-foreground">
+        Para comenzar, primero debes llenar el formulario de solicitud que
+        corresponda a tu situación (persona física o jurídica). Una vez enviado
+        el formulario te llegarán a tu correo las Condiciones para operar con
+        Inverfin. Tan pronto como podamos, un miembro de nuestro equipo se
+        pondrá en contacto con usted para agendar una reunión y proceder con el
+        registro de tu firma.
+      </p>
+
+      <div class="flex items-center gap-4">
+        <p>Elige el formulario que te corresponda:</p>
+        <Button>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdcxlxXg3NpADcDvP0wtdnp7UymqJ8JkL-N66g8Pts6I6lrDw/viewform?usp=sf_link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Persona Física
+          </a>
+        </Button>
+        <Button>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdcxlxXg3NpADcDvP0wtdnp7UymqJ8JkL-N66g8Pts6I6lrDw/viewform?usp=sf_link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Persona Jurídica
+          </a>
+        </Button>
+      </div>
     </div>
 
-    <p class="text-lg text-muted-foreground">
-      Para comenzar, primero debes llenar el formulario de solicitud que
-      corresponda a tu situación (persona física o jurídica). Una vez enviado el
-      formulario te llegarán a tu correo las Condiciones para operar con
-      Inverfin. Tan pronto como podamos, un miembro de nuestro equipo se pondrá
-      en contacto con usted para agendar una reunión y proceder con el registro
-      de tu firma.
-    </p>
+    <span class="w-full h-px bg-gray-300"></span>
 
-    <div class="flex items-center gap-4">
-      <p>Elige el formulario que te corresponda:</p>
-      <Button>Persona Física</Button>
-      <Button>Persona Jurídica</Button>
+    <div class="flex flex-col items-center gap-10">
+      <p>Documentos de requisitos para apertura de cuenta:</p>
+      <div class="flex gap-10 items-center">
+        <a
+          href="/requirements/persona-fisica.pdf"
+          download="Persona FISICA - Requisitos"
+          class="flex flex-col items-center cursor-pointer"
+        >
+          <FileSpreadsheet class="size-10 text-gray-500" />
+          Persona Física
+        </a>
+
+        <a
+          href="/requirements/persona-juridica.pdf"
+          download="Persona JURIDICA - Requisitos"
+          class="flex flex-col items-center cursor-pointer"
+        >
+          <FileSpreadsheet class="size-10 text-gray-500" />
+          Persona Jurídica
+        </a>
+      </div>
     </div>
   </div>
 </section>
