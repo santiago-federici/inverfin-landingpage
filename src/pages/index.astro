@@ -15,8 +15,12 @@ import ChatBotBubble from "../components/chatbot-bubble";
   <main class="relative overflow-hidden">
     <HeroSection />
     <BrandsSection />
+    <FormSection />
+    <!-- Red line -->
+    <div class="relative w-full my-10 h-20">
+      <div class="absolute w-[110%] bg-primary rotate-2 h-full -left-4"></div>
+    </div>
     <BenefitsSection />
-
     <!-- Red line -->
     <div class="relative w-full my-10 h-20">
       <div class="absolute w-[110%] bg-primary rotate-2 h-full -left-4"></div>
@@ -25,7 +29,6 @@ import ChatBotBubble from "../components/chatbot-bubble";
     <ServicesSection />
     <WhoWeAreSection />
     <RequirementsSection />
-    <FormSection />
 
     <ChatBotBubble client:load />
   </main>
