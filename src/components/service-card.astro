@@ -13,7 +13,7 @@ const { title, description } = Astro.props;
   <!-- red line to the left of the card -->
   <div class="absolute left-0 top-0 h-full w-[5px] bg-primary"></div>
 
-  <header class="flex gap-2 items-center z-10">
+  <header class="flex gap-2 items-center">
     <slot />
     <h3 class="text-lg font-bold">{title}</h3>
   </header>
