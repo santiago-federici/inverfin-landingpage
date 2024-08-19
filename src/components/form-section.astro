@@ -23,23 +23,27 @@ import Button from "./button.astro";
     </picture>
   </div>
 
-  <form class="border-2 rounded-sm p-8 flex flex-col gap-4 w-full">
+  <form
+    action="https://formsubmit.co/anothersanti88@gmail.com"
+    method="POST"
+    class="border-2 rounded-sm p-8 flex flex-col gap-4 w-full"
+  >
     <div class="flex flex-col gap-2">
-      <label for="name">Nombre</label>
+      <label for="nombre">Nombre</label>
       <input
         type="text"
         placeholder="Escribe tu nombre"
-        name="name"
-        id="name"
+        name="nombre"
+        id="nombre"
       />
     </div>
     <div class="flex flex-col gap-2">
-      <label for="lastname">Apellido</label>
+      <label for="apellido">Apellido</label>
       <input
         type="text"
         placeholder="Escribe tu apellido"
-        name="lastname"
-        id="lastname"
+        name="apellido"
+        id="apellido"
       />
     </div>
     <div class="flex flex-col gap-2">
@@ -52,9 +56,33 @@ import Button from "./button.astro";
       />
     </div>
     <div class="flex flex-col gap-2">
-      <label for="phone">Teléfono</label>
-      <input type="number" placeholder="261 1234567" name="phone" id="phone" />
+      <label for="telefono">Teléfono</label>
+      <input
+        type="number"
+        placeholder="2611234567"
+        name="telefono"
+        id="telefono"
+      />
     </div>
+
+    <!-- hidden inputs -->
+    <input type="hidden" name="_next" value="http://localhost:4321" />
+
+    <!-- suject -->
+    <input type="hidden" name="_subject" value="Nuevo contacto" />
+
+    <!-- disable captcha -->
+    <!-- <input type="hidden" name="_captcha" value="false" /> -->
+
+    <!-- autoresponse -->
+    <input
+      type="hidden"
+      name="_autoresponse"
+      value="Gracias por contactarnos! En breves nos pondremos en contacto con usted."
+    />
+
+    <!-- email tamplate -->
+    <input type="hidden" name="_template" value="table" />
 
     <Button className="self-end mt-8">Enviar</Button>
   </form>
