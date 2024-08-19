@@ -1,0 +1,64 @@
+---
+import Button from "./button.astro";
+---
+
+<section
+  class="wrapper pt-10 pb-16 flex max-md:flex-col justify-between gap-10 lg:gap-20"
+  id="form"
+>
+  <div class="flex flex-col gap-1 w-full max-md:text-center">
+    <h3 class="text-3xl md:text-4xl font-bold">
+      Obtené asesoramiento personalizado
+    </h3>
+    <p class="text-muted-foreground">
+      Completá el formulario y un asesor te contactará a la brevedad.
+    </p>
+
+    <picture class="hidden md:flex w-11/12 lg:w-2/3 mt-20">
+      <img
+        src="/illustrations/form-illustration.svg"
+        alt="Ilustración de certificación"
+        class="object-cover"
+      />
+    </picture>
+  </div>
+
+  <form
+    action=""
+    class="border-2 border-primary/40 rounded-sm p-8 flex flex-col gap-4 w-full"
+  >
+    <div class="flex flex-col gap-2">
+      <label for="name">Nombre</label>
+      <input
+        type="text"
+        placeholder="Escribe tu nombre"
+        name="name"
+        id="name"
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <label for="lastname">Apellido</label>
+      <input
+        type="text"
+        placeholder="Escribe tu apellido"
+        name="lastname"
+        id="lastname"
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        placeholder="ejemplo@gmail.com"
+        name="email"
+        id="email"
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <label for="phone">Teléfono</label>
+      <input type="number" placeholder="261 1234567" name="phone" id="phone" />
+    </div>
+
+    <Button className="self-end mt-8">Enviar</Button>
+  </form>
+</section>

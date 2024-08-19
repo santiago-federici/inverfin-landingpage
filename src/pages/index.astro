@@ -7,12 +7,14 @@ import BenefitsSection from "../components/benefits-section.astro";
 import WhoWeAreSection from "../components/who-we-are-section.astro";
 import ServicesSection from "../components/services-section.astro";
 import RequirementsSection from "../components/requirements-section.astro";
+import FormSection from "../components/form-section.astro";
 import ChatBotBubble from "../components/chatbot-bubble";
 ---
 
 <Layout title="Inverfin">
   <main class="relative overflow-hidden">
     <HeroSection />
+    <BrandsSection />
     <BenefitsSection />
 
     <!-- Red line -->
@@ -21,9 +23,9 @@ import ChatBotBubble from "../components/chatbot-bubble";
     </div>
 
     <ServicesSection />
-    <BrandsSection />
     <WhoWeAreSection />
     <RequirementsSection />
+    <FormSection />
 
     <ChatBotBubble client:load />
   </main>
