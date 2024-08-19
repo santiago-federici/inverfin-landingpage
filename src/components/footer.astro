@@ -5,53 +5,64 @@ import SmartphoneIcon from "../icons/smartphone.astro";
 import PhoneIcon from "../icons/phone.astro";
 import MailIcon from "../icons/mail.astro";
 import MapPinIcon from "../icons/map-pin.astro";
+
+const contactInfo = [
+  {
+    text: "(+54 261) 4544442",
+    icon: SmartphoneIcon,
+  },
+  {
+    text: "(+54 261) 423-1213 / 423-1413",
+    icon: PhoneIcon,
+  },
+  {
+    text: "info@inverfinsa.com.ar",
+    icon: MailIcon,
+  },
+  {
+    text: "Sarmiento 199, 2º piso, oficina 216 Edificio Bolsa de Comercio M5500GIC – Mendoza -Argentina",
+    icon: MapPinIcon,
+  },
+];
 ---
 
-<footer class="relative">
-  <div
-    class="-z-10 bg-neutral-200 absolute left-0 top-0 w-full border-t h-full"
-  >
-  </div>
+<footer class="bg-neutral-200 border-t overflow-hidden">
+  <div class="wrapper space-y-10 py-16">
+    <section
+      class="flex flex-col lg:flex-row items-start justify-between gap-4 text-sm"
+    >
+      <div class="flex gap-4 items-center">
+        <img
+          src="/inverfin-logo.webp"
+          alt="Logo de Inverfin"
+          class="mix-blend-color-burn"
+        />
+        <div class="flex flex-col font-bold">
+          <p>INVERFIN S.A.</p>
+          <p>Agente de negociación - Matrícula 518 CNV</p>
+          <p>Miembro del Mercado Argentino de Valores</p>
+        </div>
+      </div>
 
-  <div class="flex justify-between gap-10 wrapper items-start py-16">
-    <div class="flex gap-4 items-center">
-      <img
-        src="/inverfin-logo.webp"
-        alt="Logo de Inverfin"
-        class="mix-blend-color-burn"
-      />
-      <div class="flex flex-col font-bold text-sm">
-        <p>INVERFIN S.A.</p>
-        <p>Agente de negociación - Matrícula 518 CNV</p>
-        <p>Miembro del Mercado Argentino de Valores</p>
+      <div class="flex flex-col gap-4">
+        {
+          contactInfo.map((info) => (
+            <div class="flex gap-2 items-center">
+              <info.icon class="size-4 flex-shrink-0" />
+              {info.icon === MapPinIcon ? (
+                <address>{info.text}</address>
+              ) : (
+                <p>{info.text}</p>
+              )}
+            </div>
+          ))
+        }
       </div>
-    </div>
+    </section>
 
-    <div class="flex flex-col gap-4 text-sm">
-      <div class="flex gap-2 items-center">
-        <SmartphoneIcon class="size-4" />
-        <p>(+54 261) 4544442</p>
-      </div>
-      <div class="flex gap-2 items-center">
-        <PhoneIcon class="size-4" />
-        <p>(+54 261) 423-1213 / 423-1413</p>
-      </div>
-      <div class="flex gap-2 items-center">
-        <MailIcon class="size-4" />
-        <p>info@inverfinsa.com.ar</p>
-      </div>
-      <div class="flex gap-2 items-center">
-        <MapPinIcon class="size-4" />
-        <p>
-          Sarmiento 199, 2º piso, oficina 216 Edificio Bolsa de Comercio
-          M5500GIC – Mendoza -Argentina
-        </p>
-      </div>
-    </div>
-
-    <div class="space-y-2">
+    <section class="w-full flex flex-col items-center gap-2 border-t pt-4">
       <p class="font-semibold">Navegación</p>
-      <div class="grid grid-cols-2 gap-x-6 gap-y-3 ml-2">
+      <nav class="flex flex-wrap justify-center gap-x-4 gap-y-2">
         {
           NAV_LINKS.map((link) => (
             <a
@@ -62,7 +73,7 @@ import MapPinIcon from "../icons/map-pin.astro";
             </a>
           ))
         }
-      </div>
-    </div>
+      </nav>
+    </section>
   </div>
 </footer>
