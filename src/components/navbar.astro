@@ -1,33 +1,8 @@
 ---
 import { cn } from "../lib/utils";
-import Button from "./button.astro";
+import { NAV_LINKS } from "../lib/constants";
 
-const navLinks = [
-  {
-    title: "Inicio",
-    href: "#",
-  },
-  {
-    title: "Beneficios",
-    href: "#",
-  },
-  {
-    title: "Quénes somos",
-    href: "#",
-  },
-  {
-    title: "Servicios",
-    href: "#",
-  },
-  {
-    title: "Empezar a invertir",
-    href: "#",
-  },
-  {
-    title: "Ubicación",
-    href: "#",
-  },
-];
+import Button from "./button.astro";
 
 const isOpen = false;
 ---
@@ -36,7 +11,7 @@ const isOpen = false;
   <h1 class="text-4xl font-black">Logo</h1>
   <nav class="lg:flex gap-4 items-center hidden">
     {
-      navLinks.map((link) => (
+      NAV_LINKS.map((link) => (
         <a href={link.href} class="hover:text-primary duration-200 text-nowrap">
           {link.title}
         </a>
@@ -73,7 +48,7 @@ const isOpen = false;
     class="lg:flex gap-4 items-center hidden"
   >
     {
-      navLinks.map((link) => (
+      NAV_LINKS.map((link) => (
         <a href={link.href} class="hover:text-primary duration-200">
           {link.title}
         </a>

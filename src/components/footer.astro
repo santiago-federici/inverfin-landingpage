@@ -1,35 +1,10 @@
 ---
+import { NAV_LINKS } from "../lib/constants";
+
 import SmartphoneIcon from "../icons/smartphone.astro";
 import PhoneIcon from "../icons/phone.astro";
 import MailIcon from "../icons/mail.astro";
 import MapPinIcon from "../icons/map-pin.astro";
-
-const navLinks = [
-  {
-    title: "Inicio",
-    href: "#",
-  },
-  {
-    title: "Beneficios",
-    href: "#",
-  },
-  {
-    title: "Quénes somos",
-    href: "#",
-  },
-  {
-    title: "Servicios",
-    href: "#",
-  },
-  {
-    title: "Empezar a invertir",
-    href: "#",
-  },
-  {
-    title: "Ubicación",
-    href: "#",
-  },
-];
 ---
 
 <footer class="relative">
@@ -78,7 +53,7 @@ const navLinks = [
       <p class="font-semibold">Navegación</p>
       <div class="grid grid-cols-2 gap-x-6 gap-y-3 ml-2">
         {
-          navLinks.map((link) => (
+          NAV_LINKS.map((link) => (
             <a
               href={link.href}
               class="hover:text-primary duration-200 text-nowrap text-sm"
