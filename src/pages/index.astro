@@ -3,12 +3,11 @@ import Layout from "../layouts/Layout.astro";
 
 import HeroSection from "../components/hero-section.astro";
 import BrandsSection from "../components/brands-section.astro";
+import FormSection from "../components/form-section.astro";
 import BenefitsSection from "../components/benefits-section.astro";
 import WhoWeAreSection from "../components/who-we-are-section.astro";
 import ServicesSection from "../components/services-section.astro";
 import RequirementsSection from "../components/requirements-section.astro";
-import FormSection from "../components/form-section.astro";
-import ChatBotBubble from "../components/chatbot-bubble";
 ---
 
 <Layout title="Inverfin">
@@ -29,7 +28,5 @@ import ChatBotBubble from "../components/chatbot-bubble";
     <ServicesSection />
     <WhoWeAreSection />
     <RequirementsSection />
-
-    <ChatBotBubble client:load />
   </main>
 </Layout>
