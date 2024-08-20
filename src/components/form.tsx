@@ -49,7 +49,7 @@ export default function Form() {
 
   return (
     <section
-      className="wrapper flex justify-between gap-10 pb-16 pt-10 max-md:flex-col lg:gap-20"
+      className="wrapper flex justify-between gap-10 py-20 max-md:flex-col lg:gap-20"
       id="form"
     >
       <div className="flex w-full flex-col gap-1 max-md:text-center">
