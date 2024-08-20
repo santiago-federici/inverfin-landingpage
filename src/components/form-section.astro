@@ -64,6 +64,15 @@ import Button from "./button.astro";
         id="telefono"
       />
     </div>
+    <div class="flex flex-col gap-2">
+      <label for="mensaje">Mensaje</label>
+      <textarea
+        name="mensaje"
+        id="mensaje"
+        rows="5"
+        placeholder="Deja tu mensaje aquí"
+        class="resize-y min-h-12"></textarea>
+    </div>
 
     <!-- hidden inputs -->
     <input type="hidden" name="_next" value="http://localhost:4321" />

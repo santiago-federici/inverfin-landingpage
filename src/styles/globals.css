@@ -114,6 +114,6 @@ select {
   }
 }
 
-input {
+input, textarea {
   @apply bg-input text-foreground rounded-md border border-border focus:border-black focus:ring-2 focus:ring-black py-1 pl-3;
 }
