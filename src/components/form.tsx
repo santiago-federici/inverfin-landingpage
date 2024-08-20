@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./button";
 
 export default function Form() {
   const [formData, setFormData] = useState({
@@ -138,7 +139,7 @@ export default function Form() {
         {isLoading ? (
           <p className="mt-8 self-end">Enviando...</p>
         ) : (
-          <button className="mt-8 self-end">Enviar</button>
+          <Button className="mt-8 self-end">Enviar</Button>
         )}
 
         {success && (
