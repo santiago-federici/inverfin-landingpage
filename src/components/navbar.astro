@@ -8,7 +8,13 @@ const isOpen = false;
 ---
 
 <header class="flex justify-between items-center wrapper py-4">
-  <h1 class="text-4xl font-black">Logo</h1>
+  <picture class="w-36 md:w-40 aspect-auto">
+    <img
+      src="/logo-inverfin.webp"
+      alt="Logo de Inverfin"
+      class="object-cover"
+    />
+  </picture>
   <nav class="lg:flex gap-4 items-center hidden">
     {
       NAV_LINKS.map((link) => (
