@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 
 import HeroSection from "../components/hero-section.astro";
 import BrandsSection from "../components/brands-section.astro";
-import FormSection from "../components/form-section.astro";
+import Form from "../components/form";
 import BenefitsSection from "../components/benefits-section.astro";
 import WhoWeAreSection from "../components/who-we-are-section.astro";
 import ServicesSection from "../components/services-section.astro";
@@ -14,12 +14,15 @@ import RequirementsSection from "../components/requirements-section.astro";
   <main class="relative overflow-hidden">
     <HeroSection />
     <BrandsSection />
-    <FormSection />
+    <Form client:load />
+
     <!-- Red line -->
     <div class="relative w-full my-10 h-20">
       <div class="absolute w-[110%] bg-primary rotate-2 h-full -left-4"></div>
     </div>
+
     <BenefitsSection />
+
     <!-- Red line -->
     <div class="relative w-full my-10 h-20">
       <div class="absolute w-[110%] bg-primary rotate-2 h-full -left-4"></div>
