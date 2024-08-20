@@ -50,7 +50,7 @@ export default function Form() {
 
   return (
     <section
-      className="wrapper flex justify-between gap-10 py-20 max-md:flex-col lg:gap-20"
+      className="wrapper flex justify-between gap-10 py-20 max-lg:flex-col lg:gap-20"
       id="form"
     >
       <div className="flex w-full flex-col gap-1 max-md:text-center">
@@ -61,7 +61,7 @@ export default function Form() {
           Completá el formulario y un asesor te contactará a la brevedad.
         </p>
 
-        <picture className="mt-20 hidden w-11/12 md:flex lg:w-2/3">
+        <picture className="mt-20 hidden w-11/12 lg:flex lg:w-2/3">
           <img
             src="/illustrations/form-illustration.svg"
             alt="Ilustración de certificación"
@@ -71,7 +71,7 @@ export default function Form() {
       </div>
 
       <form
-        className="flex w-full flex-col gap-4 rounded-sm border-2 p-8"
+        className="flex w-full flex-col gap-4 rounded-sm bg-white p-8"
         onSubmit={handleSubmit}
       >
         <div className="flex flex-col gap-2">
