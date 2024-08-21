@@ -10,24 +10,12 @@ import ServicesSection from "../components/services-section.astro";
 import RequirementsSection from "../components/requirements-section.astro";
 ---
 
-<Layout title="Inverfin">
+<Layout title="Inverfin - Inverfin S.A.">
   <main class="relative overflow-hidden">
     <HeroSection />
     <BrandsSection />
     <Form client:load />
-
-    <!-- Red line -->
-    <div class="relative w-full my-10 h-16">
-      <div class="absolute w-[110%] bg-primary rotate-2 h-full -left-4"></div>
-    </div>
-
     <BenefitsSection />
-
-    <!-- Red line -->
-    <div class="relative w-full my-10 h-16">
-      <div class="absolute w-[110%] bg-primary -rotate-2 h-full -left-4"></div>
-    </div>
-
     <ServicesSection />
     <WhoWeAreSection />
     <RequirementsSection />
