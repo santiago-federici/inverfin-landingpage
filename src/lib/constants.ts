@@ -4,6 +4,10 @@ export const NAV_LINKS = [
     href: "#inicio",
   },
   {
+    title: "Contactanos",
+    href: "#form",
+  },
+  {
     title: "Beneficios",
     href: "#benefits",
   },
