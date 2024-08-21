@@ -5,22 +5,29 @@ import SmartphoneIcon from "../icons/smartphone.astro";
 import PhoneIcon from "../icons/phone.astro";
 import MailIcon from "../icons/mail.astro";
 import MapPinIcon from "../icons/map-pin.astro";
+import InstagramIcon from "../icons/instagram.astro";
+import TwitterIcon from "../icons/twitter.astro";
+import FacebookIcon from "../icons/facebook.astro";
 
 const contactInfo = [
   {
     text: "(+54 261) 4544442",
+    href: "https://wa.me/+542614544442",
     icon: SmartphoneIcon,
   },
   {
     text: "(+54 261) 423-1213 / 423-1413",
+    href: "https://wa.me/+542614231213",
     icon: PhoneIcon,
   },
   {
-    text: "info@inverfinsa.com.ar",
+    text: "operaciones@inverfinsa.com.ar",
+    href: "mailto:operaciones@inverfinsa.com.ar",
     icon: MailIcon,
   },
   {
     text: "Sarmiento 199, 2º piso, oficina 216 Edificio Bolsa de Comercio M5500GIC – Mendoza -Argentina",
+    href: "https://www.google.com/maps/search/Sarmiento+199,+2%C2%BA+piso,+oficina+216+Edificio+Bolsa+de+Comercio+M5500GIC+%E2%80%93+Mendoza+-Argentina/@-32.8900762,-68.8419388,20z?entry=ttu",
     icon: MapPinIcon,
   },
 ];
@@ -49,16 +56,38 @@ const contactInfo = [
       <div class="flex flex-col gap-4">
         {
           contactInfo.map((info) => (
-            <div class="flex gap-2 items-center">
+            <a
+              href={info.href}
+              target="_blank"
+              rel="noreferrer"
+              class="flex gap-2 items-center"
+            >
               <info.icon class="size-4 flex-shrink-0" />
               {info.icon === MapPinIcon ? (
                 <address>{info.text}</address>
               ) : (
                 <p>{info.text}</p>
               )}
-            </div>
+            </a>
           ))
         }
+        <div class="flex gap-2 mt-2">
+          <a href="#" target="_blank" rel="noreferrer">
+            <InstagramIcon
+              class="text-muted-foreground size-5 hover:text-pink-500 hover:scale-[1.08] cursor-pointer"
+            />
+          </a>
+          <a href="#" target="_blank" rel="noreferrer">
+            <TwitterIcon
+              class="text-muted-foreground size-5 hover:text-cyan-400 hover:scale-[1.08] cursor-pointer ml-1"
+            />
+          </a>
+          <a href="#" target="_blank" rel="noreferrer">
+            <FacebookIcon
+              class="text-muted-foreground size-5 hover:text-blue-500 hover:scale-[1.08] cursor-pointer"
+            />
+          </a>
+        </div>
       </div>
     </section>
 
