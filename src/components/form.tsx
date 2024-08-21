@@ -65,7 +65,10 @@ export default function Form() {
           <img
             src="/illustrations/form-illustration.svg"
             alt="Ilustración de certificación"
+            loading="lazy"
             className="object-cover"
+            width="500"
+            height="300"
           />
         </picture>
       </div>
