@@ -13,21 +13,25 @@ const contactInfo = [
   {
     text: "(+54 261) 4544442",
     href: "https://wa.me/+542614544442",
+    ariaLabel: "Llamar al número (+54 261) 4544442",
     icon: SmartphoneIcon,
   },
   {
     text: "(+54 261) 423-1213 / 423-1413",
     href: "https://wa.me/+542614231213",
+    ariaLabel: "Llamar al número (+54 261) 423-1213",
     icon: PhoneIcon,
   },
   {
     text: "operaciones@inverfinsa.com.ar",
     href: "mailto:operaciones@inverfinsa.com.ar",
+    ariaLabel: "Enviar correo electrónico a operaciones@inverfinsa.com.ar",
     icon: MailIcon,
   },
   {
     text: "Sarmiento 199, 2º piso, oficina 216 Edificio Bolsa de Comercio M5500GIC – Mendoza -Argentina",
     href: "https://www.google.com/maps/search/Sarmiento+199,+2%C2%BA+piso,+oficina+216+Edificio+Bolsa+de+Comercio+M5500GIC+%E2%80%93+Mendoza+-Argentina/@-32.8900762,-68.8419388,20z?entry=ttu",
+    ariaLabel: "Ver la ubicación en Google Maps",
     icon: MapPinIcon,
   },
 ];
@@ -61,6 +65,7 @@ const contactInfo = [
               target="_blank"
               rel="noreferrer"
               class="flex gap-2 items-center"
+              aria-label={info.ariaLabel}
             >
               <info.icon class="size-4 flex-shrink-0" />
               {info.icon === MapPinIcon ? (
@@ -72,17 +77,27 @@ const contactInfo = [
           ))
         }
         <div class="flex gap-2 mt-2">
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Ver instagram"
+          >
             <InstagramIcon
               class="text-muted-foreground size-5 hover:text-pink-500 hover:scale-[1.08] cursor-pointer"
             />
           </a>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="#" target="_blank" rel="noreferrer" aria-label="Ver twitter">
             <TwitterIcon
               class="text-muted-foreground size-5 hover:text-cyan-400 hover:scale-[1.08] cursor-pointer ml-1"
             />
           </a>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Ver facebook"
+          >
             <FacebookIcon
               class="text-muted-foreground size-5 hover:text-blue-500 hover:scale-[1.08] cursor-pointer"
             />
@@ -99,6 +114,7 @@ const contactInfo = [
             <a
               href={link.href}
               class="hover:text-primary duration-200 text-nowrap text-sm"
+              aria-label={link.ariaLabel}
             >
               {link.title}
             </a>

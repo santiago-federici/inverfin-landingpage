@@ -39,6 +39,7 @@ export default function Navbar() {
           <a
             key={link.href}
             href={link.href}
+            aria-label={link.ariaLabel}
             className="text-nowrap duration-200 hover:text-primary"
           >
             {link.title}
@@ -130,6 +131,7 @@ export default function Navbar() {
                   <a
                     key={link.href}
                     href={link.href}
+                    aria-label={link.ariaLabel}
                     className="text-2xl duration-200 hover:text-primary"
                     onClick={() => toggleMenu()}
                   >
