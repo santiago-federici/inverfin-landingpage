@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+
 import { NAV_LINKS } from "../lib/constants";
 import { cn } from "../lib/utils";
 
@@ -11,17 +13,17 @@ export default function Navbar() {
   const [menu, toggleMenu] = useCycle(false, true);
 
   // disable scrolling when menu is open
-  // useEffect(() => {
-  //   if (menu) {
-  //     setTimeout(() => (document.body.style.overflow = "hidden"), 500);
-  //   } else {
-  //     document.body.style.overflow = "";
-  //   }
+  useEffect(() => {
+    if (menu) {
+      setTimeout(() => (document.body.style.overflow = "hidden"), 500);
+    } else {
+      document.body.style.overflow = "";
+    }
 
-  //   return () => {
-  //     document.body.style.overflow = "";
-  //   };
-  // }, [menu]);
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menu]);
 
   return (
     <header className="wrapper flex items-center justify-between py-4">
