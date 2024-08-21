@@ -32,6 +32,8 @@ export default function Navbar() {
           src="/logos/inverfin.webp"
           alt="Logo de Inverfin"
           className="object-cover"
+          width="200"
+          height="60"
         />
       </picture>
       <nav className="hidden items-center gap-4 lg:flex">
