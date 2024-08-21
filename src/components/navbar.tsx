@@ -29,7 +29,7 @@ export default function Navbar() {
     <header className="wrapper flex items-center justify-between py-4">
       <picture className="aspect-auto w-36 md:w-40">
         <img
-          src="/logo-inverfin.webp"
+          src="/logos/inverfin.webp"
           alt="Logo de Inverfin"
           className="object-cover"
         />

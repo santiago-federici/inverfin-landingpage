@@ -4,8 +4,14 @@ import Button from "./button";
 
 <section class="wrapper" id="inicio">
   <picture class="bg-gray-500 absolute top-0 left-0 w-full h-[700px] -z-10">
+    <source
+      srcset="/hero/hero-bg-small.webp 500w, /hero/hero-bg-medium.webp 1000w, /hero/hero-bg-large.webp 1500w"
+      sizes="(max-width: 600px) 500px, (max-width: 1200px) 1000px, 1500px"
+      type="image/webp"
+    />
+
     <img
-      src="/hero-bg.webp"
+      src="/hero/hero-bg-large.webp"
       alt="Imagen de fondo"
       class="object-cover w-full h-full mix-blend-multiply"
     />
