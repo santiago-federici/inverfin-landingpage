@@ -1,4 +1,4 @@
-export default function MenuIcon({ className }: { className?: string }) {
+export default function X({ className }: { className?: string }) {
   return (
     <svg
       className={className}
@@ -11,9 +11,8 @@ export default function MenuIcon({ className }: { className?: string }) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <line x1="4" x2="20" y1="12" y2="12"></line>
-      <line x1="4" x2="20" y1="6" y2="6"></line>
-      <line x1="4" x2="20" y1="18" y2="18"></line>
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
     </svg>
   );
 }
