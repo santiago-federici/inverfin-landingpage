@@ -156,6 +156,8 @@ export default function Navbar() {
                   src="/logo-inverfin.webp"
                   alt="Logo de Inverfin"
                   className="object-cover"
+                  width="200"
+                  height="60"
                 />
               </picture>
             </motion.aside>
