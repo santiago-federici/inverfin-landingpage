@@ -153,7 +153,7 @@ export default function Navbar() {
               </Button>
               <picture className="mx-auto mt-auto aspect-auto w-1/2 md:w-1/3">
                 <img
-                  src="/logo-inverfin.webp"
+                  src="/logos/inverfin.webp"
                   alt="Logo de Inverfin"
                   className="object-cover"
                   width="200"
