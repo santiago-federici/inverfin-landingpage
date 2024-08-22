@@ -73,6 +73,7 @@ export default function Form() {
           <input
             type="text"
             placeholder="Escribe tu nombre"
+            aria-label="Nombre"
             name="name"
             id="name"
             required
@@ -83,6 +84,7 @@ export default function Form() {
           <input
             type="text"
             placeholder="Escribe tu apellido"
+            aria-label="Apellido"
             name="lastname"
             id="lastname"
             required
@@ -93,6 +95,7 @@ export default function Form() {
           <input
             type="email"
             placeholder="ejemplo@gmail.com"
+            aria-label="Email"
             name="email"
             id="email"
             required
@@ -103,6 +106,7 @@ export default function Form() {
           <input
             type="number"
             placeholder="2611234567"
+            aria-label="Número de teléfono"
             name="phoneNumber"
             id="phoneNumber"
             required
@@ -115,6 +119,7 @@ export default function Form() {
             id="message"
             rows={5}
             placeholder="Deja tu mensaje aquí"
+            aria-label="Mensaje"
             required
             className="min-h-12 resize-y"
           ></textarea>
