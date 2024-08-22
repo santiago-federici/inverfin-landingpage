@@ -1,72 +1,87 @@
 ---
 import FileSpreadsheet from "../icons/file-spreadsheet.astro";
 import Button from "./button";
+import { RevealFromBottom } from "./reveal-from-bottom";
 ---
 
 <section class="py-20 relative bg-white" id="requirements">
   <div class="wrapper flex flex-col gap-10">
     <div class="flex flex-col gap-20 items-center">
-      <h3 class="text-3xl md:text-4xl font-bold">
-        ¿Qué necesito para empezar a invertir?
-      </h3>
+      <RevealFromBottom client:load>
+        <h3 class="text-3xl md:text-4xl font-bold">
+          ¿Qué necesito para empezar a invertir?
+        </h3>
+      </RevealFromBottom>
 
-      <p class="text-lg text-muted-foreground">
-        Para comenzar, primero debes llenar el formulario de solicitud que
-        corresponda a tu situación (persona física o jurídica). Una vez enviado
-        el formulario te llegarán a tu correo las Condiciones para operar con
-        Inverfin. Tan pronto como podamos, un miembro de nuestro equipo se
-        pondrá en contacto con usted para agendar una reunión y proceder con el
-        registro de tu firma.
-      </p>
+      <RevealFromBottom delay={0.25} client:load>
+        <p class="text-lg text-muted-foreground">
+          Para comenzar, primero debes llenar el formulario de solicitud que
+          corresponda a tu situación (persona física o jurídica). Una vez
+          enviado el formulario te llegarán a tu correo las Condiciones para
+          operar con Inverfin. Tan pronto como podamos, un miembro de nuestro
+          equipo se pondrá en contacto con usted para agendar una reunión y
+          proceder con el registro de tu firma.
+        </p>
+      </RevealFromBottom>
 
-      <div
-        class="flex max-md:flex-col items-start max-md:w-full md:items-center gap-4"
+      <RevealFromBottom
+        delay={0.5}
+        className="flex max-md:flex-col items-start max-md:w-full md:items-center gap-4"
+        client:load
       >
-        <p>Elige el formulario que te corresponda:</p>
-        <Button className="w-full md:w-auto max-md:py-3">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdcxlxXg3NpADcDvP0wtdnp7UymqJ8JkL-N66g8Pts6I6lrDw/viewform?usp=sf_link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Persona Física
-          </a>
-        </Button>
-        <Button className="w-full md:w-auto max-md:py-3">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdcxlxXg3NpADcDvP0wtdnp7UymqJ8JkL-N66g8Pts6I6lrDw/viewform?usp=sf_link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Persona Jurídica
-          </a>
-        </Button>
-      </div>
+        <>
+          <p>Elige el formulario que te corresponda:</p>
+          <Button className="w-full md:w-auto max-md:py-3">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdcxlxXg3NpADcDvP0wtdnp7UymqJ8JkL-N66g8Pts6I6lrDw/viewform?usp=sf_link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Persona Física
+            </a>
+          </Button>
+          <Button className="w-full md:w-auto max-md:py-3">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdcxlxXg3NpADcDvP0wtdnp7UymqJ8JkL-N66g8Pts6I6lrDw/viewform?usp=sf_link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Persona Jurídica
+            </a>
+          </Button>
+        </>
+      </RevealFromBottom>
     </div>
 
     <span class="w-full h-px bg-gray-300"></span>
 
-    <div class="flex flex-col items-center gap-10">
-      <p>Documentos de requisitos para apertura de cuenta:</p>
-      <div class="flex gap-10 items-center">
-        <a
-          href="/requirements/persona-fisica.pdf"
-          download="Persona FISICA - Requisitos"
-          class="flex flex-col items-center cursor-pointer p-4"
-        >
-          <FileSpreadsheet class="size-10 text-gray-500" />
-          Persona Física
-        </a>
+    <RevealFromBottom
+      delay={0.75}
+      className="flex flex-col items-center gap-10"
+      client:load
+    >
+      <>
+        <p>Documentos de requisitos para apertura de cuenta:</p>
+        <div class="flex gap-10 items-center">
+          <a
+            href="/requirements/persona-fisica.pdf"
+            download="Persona FISICA - Requisitos"
+            class="flex flex-col items-center cursor-pointer p-4"
+          >
+            <FileSpreadsheet class="size-10 text-gray-500" />
+            Persona Física
+          </a>
 
-        <a
-          href="/requirements/persona-juridica.pdf"
-          download="Persona JURIDICA - Requisitos"
-          class="flex flex-col items-center cursor-pointer p-4"
-        >
-          <FileSpreadsheet class="size-10 text-gray-500" />
-          Persona Jurídica
-        </a>
-      </div>
-    </div>
+          <a
+            href="/requirements/persona-juridica.pdf"
+            download="Persona JURIDICA - Requisitos"
+            class="flex flex-col items-center cursor-pointer p-4"
+          >
+            <FileSpreadsheet class="size-10 text-gray-500" />
+            Persona Jurídica
+          </a>
+        </div>
+      </>
+    </RevealFromBottom>
   </div>
 </section>

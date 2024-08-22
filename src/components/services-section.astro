@@ -9,6 +9,7 @@ import CircuitBoardIcon from "../icons/circuit-board.astro";
 import TicketCheckIcon from "../icons/ticket-check.astro";
 import RadioTowerIcon from "../icons/radio-tower.astro";
 import ServiceCard from "./service-card.astro";
+import { RevealFromBottom } from "./reveal-from-bottom";
 
 const services = [
   {
@@ -67,20 +68,28 @@ const services = [
 ---
 
 <section class="wrapper py-20 flex flex-col gap-20 items-center" id="services">
-  <div class="text-center space-y-1">
-    <h3 class="text-3xl md:text-4xl font-bold">Nuestros servicios</h3>
-    <p class="text-muted-foreground">
-      Ofrecemos una amplia gama de servicios adaptados a tus necesidades para
-      maximizar tus inversiones.
-    </p>
-  </div>
+  <RevealFromBottom className="text-center space-y-1" client:load>
+    <>
+      <h3 class="text-3xl md:text-4xl font-bold">Nuestros servicios</h3>
+      <p class="text-muted-foreground">
+        Ofrecemos una amplia gama de servicios adaptados a tus necesidades para
+        maximizar tus inversiones.
+      </p>
+    </>
+  </RevealFromBottom>
 
   <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
     {
-      services.map((service) => (
-        <ServiceCard title={service.title} description={service.description}>
-          <service.icon />
-        </ServiceCard>
+      services.map((service, index) => (
+        <RevealFromBottom
+          delay={0.25 * (index + 1)}
+          className="w-full h-full"
+          client:load
+        >
+          <ServiceCard title={service.title} description={service.description}>
+            <service.icon />
+          </ServiceCard>
+        </RevealFromBottom>
       ))
     }
   </div>

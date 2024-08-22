@@ -1,5 +1,6 @@
 ---
 import Button from "./button";
+import { RevealFromBottom } from "./reveal-from-bottom";
 ---
 
 <section class="wrapper" id="inicio">
@@ -20,18 +21,26 @@ import Button from "./button";
   <div
     class="h-[700px] flex flex-col justify-center items-center max-md:text-center md:items-start max-w-[70ch] gap-2"
   >
-    <h1 class="text-white text-4xl md:text-5xl lg:text-6xl">
-      Negociaciones Exitosas, Resultados Tangibles
-    </h1>
-    <h2 class="text-gray-300 text-lg lg:text-xl">
-      En Inverfin, diseñamos estrategias a medida para asegurar acuerdos
-      exitosos, guiándote en cada paso del proceso.
-    </h2>
-    <Button className="mt-4 w-4/5 md:w-1/2 hover:bg-primary-hover">
-      <a href="#form"> Envia tus datos </a>
-    </Button>
-    <p class="text-gray-300 text-xs md:text-sm">
-      No compartiremos tu información con nadie.
-    </p>
+    <RevealFromBottom client:load>
+      <h1 class="text-white text-4xl md:text-5xl lg:text-6xl">
+        Negociaciones Exitosas, Resultados Tangibles
+      </h1>
+    </RevealFromBottom>
+    <RevealFromBottom delay={0.25} client:load>
+      <h2 class="text-gray-300 text-lg lg:text-xl">
+        En Inverfin, diseñamos estrategias a medida para asegurar acuerdos
+        exitosos, guiándote en cada paso del proceso.
+      </h2>
+    </RevealFromBottom>
+    <RevealFromBottom delay={0.5} client:load>
+      <>
+        <Button className="mt-4 w-4/5 md:w-1/2 hover:bg-primary-hover">
+          <a href="#form"> Envia tus datos </a>
+        </Button>
+        <p class="text-gray-300 text-xs md:text-sm">
+          No compartiremos tu información con nadie.
+        </p>
+      </>
+    </RevealFromBottom>
   </div>
 </section>

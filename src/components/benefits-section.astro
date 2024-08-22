@@ -4,6 +4,8 @@ import ChartIcon from "../icons/chart-no-axes-combined.astro";
 import WrenchIcon from "../icons/wrench.astro";
 import ShieldIcon from "../icons/shield.astro";
 import CircleCheckIcon from "../icons/circle-check.astro";
+import { RevealFromBottom } from "./reveal-from-bottom";
+import { RevealFromSide } from "./reveal-from-side";
 
 const benefits = [
   {
@@ -37,34 +39,42 @@ const benefits = [
   <div
     class="wrapper flex flex-col items-center gap-12 lg:gap-20 border-t border-b py-20"
   >
-    <div class="space-y-1 text-center">
-      <h3 class="text-3xl md:text-4xl font-bold">¿Por qué Elegir Inverfin?</h3>
-      <p class="text-muted-foreground">
-        Descubre cómo podemos ayudarte a alcanzar tus metas financieras.
-      </p>
-    </div>
+    <RevealFromBottom className="space-y-1 text-center" client:load>
+      <>
+        <h3 class="text-3xl md:text-4xl font-bold">
+          ¿Por qué Elegir Inverfin?
+        </h3>
+        <p class="text-muted-foreground">
+          Descubre cómo podemos ayudarte a alcanzar tus metas financieras.
+        </p>
+      </>
+    </RevealFromBottom>
 
     <div class="flex justify-around items-center gap-10">
-      <picture class="hidden lg:flex w-1/4">
-        <img
-          src="/illustrations/secure-illustration.svg"
-          alt="Ilustración de certificación"
-          loading="lazy"
-          class="object-cover"
-          width="500"
-          height="300"
-        />
-      </picture>
+      <RevealFromSide side="left" className="w-1/4" client:load>
+        <picture class="hidden lg:flex w-full">
+          <img
+            src="/illustrations/secure-illustration.svg"
+            alt="Ilustración de certificación"
+            loading="lazy"
+            class="object-cover"
+            width="500"
+            height="300"
+          />
+        </picture>
+      </RevealFromSide>
 
       <div class="grid grid-cols-2 xl:grid-cols-3 gap-10">
         {
-          benefits.map((benefit) => (
-            <BenefitCard
-              title={benefit.title}
-              description={benefit.description}
-            >
-              <benefit.icon />
-            </BenefitCard>
+          benefits.map((benefit, index) => (
+            <RevealFromBottom delay={0.25 * (index + 1)} client:load>
+              <BenefitCard
+                title={benefit.title}
+                description={benefit.description}
+              >
+                <benefit.icon />
+              </BenefitCard>
+            </RevealFromBottom>
           ))
         }
       </div>
