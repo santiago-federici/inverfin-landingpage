@@ -147,7 +147,6 @@ export default function Navbar() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
                   Clientes
                 </a>
               </Button>
@@ -158,6 +157,7 @@ export default function Navbar() {
                   className="object-cover"
                   width="200"
                   height="60"
+                  loading="lazy"
                 />
               </picture>
             </motion.aside>
