@@ -1,32 +1,30 @@
+"use client";
+
 import { useState } from "react";
+
 import Button from "./button";
 
 export default function Form() {
-  const [formData, setFormData] = useState({
-    name: "",
-    lastname: "",
-    phoneNumber: "",
-    email: "",
-    message: "",
-  });
-
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
+    const lastname = formData.get("lastname");
+    const phoneNumber = formData.get("phoneNumber");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
     const response = await fetch("/api/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ name, lastname, phoneNumber, email, message }),
+      cache: "no-cache",
     });
 
     console.log(response);
@@ -34,13 +32,6 @@ export default function Form() {
       setIsLoading(false);
       setError(false);
       setSuccess(true);
-      setFormData({
-        name: "",
-        lastname: "",
-        phoneNumber: "",
-        email: "",
-        message: "",
-      });
     } else {
       setIsLoading(false);
       setError(true);
@@ -84,8 +75,6 @@ export default function Form() {
             placeholder="Escribe tu nombre"
             name="name"
             id="name"
-            value={formData.name}
-            onChange={handleChange}
             required
           />
         </div>
@@ -96,8 +85,6 @@ export default function Form() {
             placeholder="Escribe tu apellido"
             name="lastname"
             id="lastname"
-            value={formData.lastname}
-            onChange={handleChange}
             required
           />
         </div>
@@ -108,8 +95,6 @@ export default function Form() {
             placeholder="ejemplo@gmail.com"
             name="email"
             id="email"
-            value={formData.email}
-            onChange={handleChange}
             required
           />
         </div>
@@ -120,8 +105,6 @@ export default function Form() {
             placeholder="2611234567"
             name="phoneNumber"
             id="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
             required
           />
         </div>
@@ -132,8 +115,6 @@ export default function Form() {
             id="message"
             rows={5}
             placeholder="Deja tu mensaje aquí"
-            value={formData.message}
-            onChange={handleChange}
             required
             className="min-h-12 resize-y"
           ></textarea>
@@ -146,13 +127,13 @@ export default function Form() {
         )}
 
         {success && (
-          <p className="self-end text-sm text-green-700">
+          <p className="self-end text-sm text-green-600">
             Mensaje enviado con éxito
           </p>
         )}
 
         {error && (
-          <p className="self-end text-sm text-red-700">
+          <p className="self-end text-sm text-red-600">
             Error al enviar el mensaje. Intente más tarde.
           </p>
         )}
