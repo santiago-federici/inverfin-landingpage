@@ -17,16 +17,18 @@ export default function Form() {
     const email = formData.get("email");
     const message = formData.get("message");
 
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      "https://inverfin-landingpage.vercel.app/api/send-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, lastname, phoneNumber, email, message }),
+        cache: "no-cache",
       },
-      body: JSON.stringify({ name, lastname, phoneNumber, email, message }),
-      cache: "no-cache",
-    });
+    );
 
-    console.log(response);
     if (response.ok) {
       setIsLoading(false);
       setError(false);
