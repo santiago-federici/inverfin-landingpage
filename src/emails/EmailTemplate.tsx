@@ -32,7 +32,7 @@ export const EmailTemplate = ({
         }}
       >
         <Img
-          src={"/public/inverfin-logo.png"}
+          src={"/logos/inverfin.webp"}
           width="100"
           height="100"
           alt="Logo de Inverfin"
