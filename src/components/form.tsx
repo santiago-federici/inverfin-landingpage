@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Button from "./button";
-import { RevealFromSide } from "./reveal-from-side";
+import { RevealFromSide } from "./reveal-from-side.tsx";
 
 export default function Form() {
   const [isLoading, setIsLoading] = useState(false);
