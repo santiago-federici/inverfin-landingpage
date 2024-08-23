@@ -18,7 +18,7 @@ export default function Form() {
     const message = formData.get("message");
 
     const response = await fetch(
-      "https://inverfin-landingpage.vercel.app/api/send-email",
+      "https://inverfinsa.com.ar/api/send-email",
       {
         method: "POST",
         headers: {
